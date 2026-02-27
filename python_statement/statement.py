@@ -6264,3 +6264,21 @@ class Scraper:
             results.append(result)
         
         return results
+
+
+def _register_config_scraper_methods():
+    """Expose config-only scrapers as classmethods on Scraper."""
+    for scraper_name in Scraper.SCRAPER_CONFIG:
+        if hasattr(Scraper, scraper_name):
+            continue
+
+        def _generated(cls, page=1, _scraper_name=scraper_name, **kwargs):
+            return cls.run_scraper(_scraper_name, page=page, **kwargs)
+
+        _generated.__name__ = scraper_name
+        _generated.__qualname__ = f"Scraper.{scraper_name}"
+        _generated.__doc__ = f"Auto-generated scraper for '{scraper_name}'."
+        setattr(Scraper, scraper_name, classmethod(_generated))
+
+
+_register_config_scraper_methods()
