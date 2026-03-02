@@ -1,0 +1,49 @@
+name: Scrape And Save Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 6am America/New_York is 11:00 UTC in EST and 10:00 UTC in EDT.
+    - cron: "0 10 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout save branch
+        uses: actions/checkout@v4
+        with:
+          ref: tim/2026/save
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install prerequisites
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run scraper
+        run: python scripts/match_and_save.py
+
+      - name: Commit and push data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data
+
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore(data): update scraped press release data"
+          git push origin tim/2026/save
