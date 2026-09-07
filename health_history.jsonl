@@ -39,3 +39,4 @@
 {"timestamp": "2026-08-17T09:46:50.217350", "mode": "quick", "total": 47, "ok": 45, "empty": 1, "no_dates": 1, "errors": 0, "failures": ["wicker"]}
 {"timestamp": "2026-08-24T09:52:08.394949", "mode": "quick", "total": 47, "ok": 44, "empty": 2, "no_dates": 1, "errors": 0, "failures": ["graham", "wicker"]}
 {"timestamp": "2026-08-31T16:54:10.105133", "mode": "quick", "total": 47, "ok": 44, "empty": 2, "no_dates": 1, "errors": 0, "failures": ["graham", "welch"]}
+{"timestamp": "2026-09-07T14:55:22.798835", "mode": "quick", "total": 47, "ok": 43, "empty": 2, "no_dates": 2, "errors": 0, "failures": ["graham", "welch"]}
