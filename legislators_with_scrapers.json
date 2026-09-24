@@ -2365,6 +2365,17 @@
     "scraper_method": "evans"
   },
   {
+    "bioguide": "K000393",
+    "official_full": "John Kennedy",
+    "gender": "M",
+    "state": "LA",
+    "district": null,
+    "party": "Republican",
+    "url": "https://www.kennedy.senate.gov/public",
+    "type": "sen",
+    "scraper_method": "johnkennedy"
+  },
+  {
     "bioguide": "H001076",
     "official_full": "Margaret Wood Hassan",
     "gender": "F",
@@ -5841,6 +5852,17 @@
     "scraper_method": "menefee"
   },
   {
+    "bioguide": "A000383",
+    "official_full": "Alan Armstrong",
+    "gender": "M",
+    "state": "OK",
+    "district": null,
+    "party": "Republican",
+    "url": "https://www.armstrong.senate.gov",
+    "type": "sen",
+    "scraper_method": "armstrong"
+  },
+  {
     "bioguide": "F000485",
     "official_full": "Clay Fuller",
     "gender": "M",
@@ -5861,5 +5883,27 @@
     "url": "https://mejia.house.gov",
     "type": "rep",
     "scraper_method": "mejia"
+  },
+  {
+    "bioguide": "G000607",
+    "official_full": "James Gallagher",
+    "gender": "M",
+    "state": "CA",
+    "district": 1,
+    "party": "Republican",
+    "url": "https://gallagher.house.gov/",
+    "type": "rep",
+    "scraper_method": "gallagher"
+  },
+  {
+    "bioguide": "G000608",
+    "official_full": "Darline Graham",
+    "gender": "F",
+    "state": "SC",
+    "district": null,
+    "party": "Republican",
+    "url": "https://www.dgraham.senate.gov",
+    "type": "sen",
+    "scraper_method": "darlinegraham"
   }
 ]

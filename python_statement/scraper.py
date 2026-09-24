@@ -1123,7 +1123,6 @@ class Scraper:
             - https://www.boozman.senate.gov/public/index.cfm/press-releases
             - https://www.thune.senate.gov/public/index.cfm/press-releases
             - https://www.barrasso.senate.gov/public/index.cfm/news-releases
-            - https://www.lgraham.senate.gov/public/index.cfm/press-releases
         """
         results = []
         if urls is None:

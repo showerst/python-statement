@@ -43,7 +43,7 @@ class HealthChecker:
         # generic — other containers
         'grassley', 'hawley', 'angusking', 'sykes', 'rickscott', 'warner',
         # table_recordlist_date (32)
-        'moran', 'thune', 'barr', 'graham',
+        'moran', 'thune', 'barr',
         # senate_drupal_newscontent (25)
         'durbin', 'wyden', 'takano',
         # react (16)
